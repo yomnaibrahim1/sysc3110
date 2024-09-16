@@ -6,7 +6,10 @@ public class AddressBook {
         myBuddies = new ArrayList<BuddyInfo>();
     }
     public static void main(String[] args) {
-        System.out.print("Address Book");
+        BuddyInfo buddy = new BuddyInfo("Tom", "Carleton","613");
+        AddressBook addressBook = new AddressBook();
+        addressBook.addBuddy(buddy);
+        addressBook.removeBuddy(buddy);
     }
     public boolean addBuddy(BuddyInfo buddytoAdd){
         return myBuddies.add(buddytoAdd);
