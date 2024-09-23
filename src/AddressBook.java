@@ -11,6 +11,7 @@ public class AddressBook {
         addressBook.addBuddy(buddy);
         addressBook.removeBuddy(0);
         addressBook.addBuddy(buddy);
+        System.out.print("This statement is written in Git");
     }
     public void addBuddy(BuddyInfo buddytoAdd){
         if (buddytoAdd!= null){
