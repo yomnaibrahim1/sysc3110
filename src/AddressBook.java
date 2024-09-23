@@ -27,5 +27,8 @@ public class AddressBook {
         return null;
 
     }
+    public int sizeBuddies (){
+        return myBuddies.size();
+    }
 
 }
