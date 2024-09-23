@@ -9,16 +9,22 @@ public class AddressBook {
         BuddyInfo buddy = new BuddyInfo("Tom", "Carleton","613");
         AddressBook addressBook = new AddressBook();
         addressBook.addBuddy(buddy);
-        addressBook.removeBuddy(buddy);
+        addressBook.removeBuddy(0);
+        addressBook.addBuddy(buddy);
     }
-    public boolean addBuddy(BuddyInfo buddytoAdd){
-        return myBuddies.add(buddytoAdd);
+    public void addBuddy(BuddyInfo buddytoAdd){
+        if (buddytoAdd!= null){
+           myBuddies.add(buddytoAdd);
+        }
+
     }
 
-    public boolean removeBuddy(BuddyInfo buddyToRemove){
-        return myBuddies.remove(buddyToRemove); //already checks if buddy is in myBuddies
+    public BuddyInfo removeBuddy(int index) {
+        if (index >= 0 && index < myBuddies.size()) {
+            return myBuddies.remove(index);
+        }
+        return null;
 
     }
-
 
 }
